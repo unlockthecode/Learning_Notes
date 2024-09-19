@@ -1,0 +1,63 @@
+Crucial git commands taught here.
+
+[ First Setup of Git on a computer ]
+git config --global user.name "Your Name"
+
+git config --global user.email "yourname@example.com" 
+or
+git config --global user.email "123456789+odin@users.noreply.github.com" # Remember to use your own private GitHub email here.
+
+[ Change default branch for git ]
+git config --global init.defaultBranch main
+
+[ Allow Colors ]
+git config --global color.ui auto
+
+[ Default Branch ? ]
+git config --global pull.rebase false
+
+[ To Verify Setup ]
+git config --get user.name
+git config --get user.email
+
+===========================
+
+[ Creating SSH Key for a New PC ]
+ls ~/.ssh/id_ed25519.pub    # checking if theres already a ssh key
+
+ssh-keygen -t ed25519       # if not, create a new one using this 
+
+cat ~/.ssh/id_ed25519.pub   # shows your key and you should copy it and do the next step 
+
+> Then link it on github on SSH & GPG settings 
+
+> Then after, test with https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection?platform=linux
+
+> If prompted, answer yes. Then check again, it should say "Hi [yourname]! You've successfully..."
+
+===========================
+
+[ Setting The Repositories Directory ]
+> (make sure your cmd isn't run as admin) Type the command
+mkdir "whateveryouwant"
+cd "whateveryouwant"
+
+[ Setting A Repository ]
+> Create any new Repository
+> After, click on the green "Code" button and go to Clone, SSH
+> cd into your repositories directory in your pc
+
+(replace everything after the "git clone" with what you copied earlier)
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git 
+
+[ Some Git Commands ]
+touch Hello_World.txt   # Creates a txt with the name Hello_World.
+git status              # Checks your own repository vs the github repository for changes.
+git log                 # Checks what changes you did to your repos.
+git .                   # Opens visual studio code from the directory the terminal is on.
+
+[ Committing Changes to Repository with Commands ]
+git add [file]                      # Adds the file to staging area in Git (making git know you want to track it)
+git commit -m "What Did You Do"     # Commits changes (uploads it to github from your local repository)
+
+===========================
