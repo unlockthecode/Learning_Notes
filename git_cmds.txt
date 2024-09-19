@@ -58,6 +58,9 @@ git .                   # Opens visual studio code from the directory the termin
 
 [ Committing Changes to Repository with Commands ]
 git add [file]                      # Adds the file to staging area in Git (making git know you want to track it)
-git commit -m "What Did You Do"     # Commits changes (uploads it to github from your local repository)
+git add .                           # Adds all files in the directory the terminal is on.
+git commit -m "What Did You Do"     # Commits changes
+git push                            # Saves changes from local to github repository.
+git push origin main                # Saves specific location from local to github repository.
 
 ===========================
