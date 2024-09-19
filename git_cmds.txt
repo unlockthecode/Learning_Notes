@@ -55,6 +55,7 @@ touch Hello_World.txt   # Creates a txt with the name Hello_World.
 git status              # Checks your own repository vs the github repository for changes.
 git log                 # Checks what changes you did to your repos.
 git .                   # Opens visual studio code from the directory the terminal is on.
+git config --global core.editor "code --wait"   # Allows you to commit changes via VSStudio
 
 [ Committing Changes to Repository with Commands ]
 git add [file]                      # Adds the file to staging area in Git (making git know you want to track it)
